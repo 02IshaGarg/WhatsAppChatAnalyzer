@@ -46,13 +46,13 @@ if uploaded_file is not None:
         st.title('OverAll Basic Statistics')
         col1, col2, col3, = st.columns(3)
         with col1:
-            st.header('Total\nMessages')
+            st.header('Messages')
             st.subheader(num_msgs)
         with col2:
-            st.header('Media\nShared')
+            st.header('Media Shared')
             st.subheader(num_med)
         with col3:
-            st.header('Link\nShared')
+            st.header('Link Shared')
             st.subheader(link)
 
         # monthly timeline
