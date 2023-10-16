@@ -12,9 +12,9 @@ def fetch_stats(selected_user, df):
     # number of msgs
     num_msgs = df.shape[0]
     # number of words
-    words = []
-    for msg in df['user']:
-        words.extend(msg.split())
+    # words = []
+    # for msg in df['user']:
+       # words.extend(msg.split())
     # number of media
     num_med = df[df['msg'] == '<Media omitted>\n'].shape[0]
 
@@ -23,7 +23,7 @@ def fetch_stats(selected_user, df):
     for msg in df['msg']:
         link.extend(extract.find_urls(msg))
 
-    return num_msgs, len(words), num_med, len(link)
+    return num_msgs, num_med, len(link)
 
 
 def monthly_timeline(selected_user, df):
