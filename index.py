@@ -40,21 +40,18 @@ if uploaded_file is not None:
 
     if st.sidebar.button('Analyse'):
 
-        num_msgs, words, num_med, link = functions.fetch_stats(selected_user, df)
+        num_msgs, num_med, link = functions.fetch_stats(selected_user, df)
 
         # overall statistics
         st.title('OverAll Basic Statistics')
-        col1, col2, col3, col4 = st.columns(4)
+        col1, col2, col3, = st.columns(4)
         with col1:
             st.header('Total Messages')
             st.subheader(num_msgs)
         with col2:
-            st.header('Total Words')
-            st.subheader(words)
-        with col3:
             st.header('Media Shared')
             st.subheader(num_med)
-        with col4:
+        with col3:
             st.header('Link Shared')
             st.subheader(link)
 
