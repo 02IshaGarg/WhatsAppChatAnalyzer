@@ -8,14 +8,14 @@ st.sidebar.title('WhatsApp Chat Analyzer')
 
 uploaded_file = st.sidebar.file_uploader("Choose a File")
 
-string = '''Please export your WhatsApp chat, whether it be a group chat or an individual/private chat, and upload it to this platform. \nAfterward, kindly proceed to click on the "Analyse" button. This action will generate a variety of insights concerning your conversation. \nYou will have the option to select the type of analysis, whether it is an overall analysis or one that specifically focuses on particular participants' analysis.\n Thank You\n- Isha Garg'''
-if uploaded_file is None:
-    st.markdown('''Please export your WhatsApp chat, whether it be a group chat or an individual/private chat, and upload it to this platform.
+guide = ''':rainbow[Please export your WhatsApp chat, whether it be a group chat or an individual/private chat, and upload it to this platform.
     Afterward, kindly proceed to click on the "Analyse" button. This action will generate a variety of insights concerning your conversation. 
-    You will have the option to select the type of analysis, whether it is an overall analysis or one that specifically focuses on particular participants' analysis.
+    You will have the option to select the type of analysis, whether it is an overall analysis or one that specifically focuses on particular participants' analysis.]
     
     Thank You
-    Isha Garg''')
+    Isha Garg'''
+
+st.markdown(guide)
 
 if uploaded_file is not None:
     # To read file as bytes:
