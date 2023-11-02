@@ -9,7 +9,7 @@ st.sidebar.title('WhatsApp Chat Analyzer')
 uploaded_file = st.sidebar.file_uploader("Choose a File")
 
 if uploaded_file is None:
-    guide = '''Please export your WhatsApp chat, whether it be a group chat or an individual/private chat, then click on "Browse Files" and upload it to this platform.
+    guide = '''Please export your WhatsApp chat (without media), whether it be a group chat or an individual/private chat, then click on "Browse Files" and upload it to this platform.
     Afterward, kindly proceed to click on the "Analyse" button. This action will generate a variety of insights concerning your conversation. 
     You will have the option to select the type of analysis, whether it is an overall analysis or one that specifically focuses on particular participants' analysis.'''
     st.markdown(guide)
