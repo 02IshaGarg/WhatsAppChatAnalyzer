@@ -122,4 +122,4 @@ if uploaded_file is not None:
         ax.imshow(df_wc)
         st.pyplot(fig)
 
-# st.text('- Isha Garg')
+st.text('- Isha Garg')
