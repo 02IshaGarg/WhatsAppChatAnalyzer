@@ -7,6 +7,8 @@ import seaborn as sns
 st.sidebar.title('WhatsApp Chat Analyzer')
 
 uploaded_file = st.sidebar.file_uploader("Choose a File")
+if uploaded_file is None:
+    st.text('Export your WhatsApp Chat (Group Chat or Individual/Private Chat, upload it')
 if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
@@ -121,6 +123,3 @@ if uploaded_file is not None:
         fig, ax = plt.subplots()
         ax.imshow(df_wc)
         st.pyplot(fig)
-
-        with col1:
-            st.text('- Isha Garg')
