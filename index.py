@@ -16,6 +16,9 @@ guide = ''':rainbow[Please export your WhatsApp chat, whether it be a group chat
     Isha Garg'''
 
 st.markdown(guide)
+st.markdown('Thank You!')
+st.markdown('Isha Garg')
+st.caption(guide)
 
 if uploaded_file is not None:
     # To read file as bytes:
