@@ -8,12 +8,13 @@ st.sidebar.title('WhatsApp Chat Analyzer')
 
 uploaded_file = st.sidebar.file_uploader("Choose a File")
 
-guide = '''Please export your WhatsApp chat, whether it be a group chat or an individual/private chat, then click on "Browse Files" and upload it to this platform.
+if uploaded_file is None:
+    guide = '''Please export your WhatsApp chat, whether it be a group chat or an individual/private chat, then click on "Browse Files" and upload it to this platform.
     Afterward, kindly proceed to click on the "Analyse" button. This action will generate a variety of insights concerning your conversation. 
     You will have the option to select the type of analysis, whether it is an overall analysis or one that specifically focuses on particular participants' analysis.'''
-st.markdown(guide)
-st.markdown('Thank You!')
-st.markdown('Isha Garg')
+    st.markdown(guide)
+    st.markdown('Thank You!')
+    st.markdown('Isha Garg')
 
 if uploaded_file is not None:
     # To read file as bytes:
@@ -129,3 +130,5 @@ if uploaded_file is not None:
         fig, ax = plt.subplots()
         ax.imshow(df_wc)
         st.pyplot(fig)
+
+    st.text('by - Isha Garg')
