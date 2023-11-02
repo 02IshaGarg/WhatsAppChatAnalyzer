@@ -8,7 +8,7 @@ st.sidebar.title('WhatsApp Chat Analyzer')
 
 uploaded_file = st.sidebar.file_uploader("Choose a File")
 if uploaded_file is None:
-    st.text('Export your WhatsApp Chat (Group Chat or Individual/Private Chat, upload it')
+    st.text('Please export your WhatsApp chat, whether it be a group chat or an individual/private chat, and upload it to this platform. \nAfterward, kindly proceed to click on the "Analyse" button. This action will generate a variety of insights concerning your conversation. \nYou will have the option to select the type of analysis, whether it is an overall analysis or one that specifically focuses on particular participants analysis.')
 if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
